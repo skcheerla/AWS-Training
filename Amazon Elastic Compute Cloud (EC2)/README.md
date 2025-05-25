@@ -12,6 +12,10 @@
     
    **Amazon Machine Image (AMI)**  
    An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance.  
+
+     An AMI is specific to the following:  
+     Region  
+     Operating system
    
    **AMI ID** : An AMI ID is a unique identifier assigned to each Amazon Machine Image (AMI) in AWS.  
    Example: ami-0abcdef1234567890
