@@ -43,6 +43,26 @@ Red Hat Enterprise Linux (RHEL) AMI: ec2-user or root
 SUSE Linux Enterprise Server (SLES) AMI: ec2-user or root  
 Oracle Linux AMI: ec2-user  
 Bitnami AMIs: bitnami  
-Rocky Linux: rocky  
+Rocky Linux: rocky   
+
+
+**Instance type **   
+
+In Amazon Web Services (AWS), an instance type defines the virtual hardware configuration of an EC2 instance (your virtual server). When you launch an EC2 instance, you choose an instance type that specifies:
+
+Number of vCPUs: Virtual CPUs (cores) available to the instance.  
+
+Amount of Memory (RAM): The amount of RAM (in GiB) allocated to the instance.  
+
+Storage Options:
+EBS-backed: Uses Amazon Elastic Block Store (EBS) for persistent block storage.  
+
+Instance Store: Provides temporary, block-level storage directly attached to the host computer. This storage is ephemeral, meaning data is lost when the instance is stopped or terminated.  
+
+NVMe SSDs: High-performance local storage.  
+
+Network Performance: The network bandwidth available to the instance (e.g., "up to 10 Gigabit," "25 Gigabit").  
+Processor Family: Whether it uses Intel, AMD, or AWS Graviton (ARM-based) processors.  
+Other features: Such as support for Elastic Fabric Adapter (EFA) for high-performance computing, or specific instruction sets. 
 
 
