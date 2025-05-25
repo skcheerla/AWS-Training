@@ -34,15 +34,15 @@ When you launch an Amazon EC2 instance from an Amazon Machine Image (AMI), the A
 
 Here are the common default usernames for various AWS AMIs:
 
-Amazon Linux AMI / Amazon Linux 2 / Amazon Linux 2023: ec2-user
-Ubuntu AMI: ubuntu
-CentOS AMI: centos or ec2-user
-Debian AMI: admin
-Fedora AMI: fedora or ec2-user
-Red Hat Enterprise Linux (RHEL) AMI: ec2-user or root
-SUSE Linux Enterprise Server (SLES) AMI: ec2-user or root
-Oracle Linux AMI: ec2-user
-Bitnami AMIs: bitnami
-Rocky Linux: rocky
+Amazon Linux AMI / Amazon Linux 2 / Amazon Linux 2023: ec2-user  
+Ubuntu AMI: ubuntu  
+CentOS AMI: centos or ec2-user  
+Debian AMI: admin  
+Fedora AMI: fedora or ec2-user  
+Red Hat Enterprise Linux (RHEL) AMI: ec2-user or root  
+SUSE Linux Enterprise Server (SLES) AMI: ec2-user or root  
+Oracle Linux AMI: ec2-user  
+Bitnami AMIs: bitnami  
+Rocky Linux: rocky  
 
 
