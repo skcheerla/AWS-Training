@@ -11,9 +11,11 @@
     **Resource types** - The resource type on which the tag will be created when an instance is launched from the launch template.  
     
    **Amazon Machine Image (AMI)**  
-   An AMI contains the software configuration (operating system (OS), application server, and applications) required to launch your instance.
+   An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance. 
   
   The AMI catalog contains applications and OS images organized as follows:  
+
+    
 **MY AMIS** - Private AMIs you've created or AMIs shared with you by another AWS account.  
 **AWS Marketplace AMIs** - Publicly available AMIs published by AWS or trusted third parties.  
 
