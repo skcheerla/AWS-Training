@@ -26,7 +26,7 @@ eu-west-1 (Ireland)
 ap-south-1 (Mumbai)  
 ap-southeast-1 (Singapore)  
 
-**2. Availability Zone (AZ**)  
+## 2. Availability Zone (AZ)  
 
 An Availability Zone (AZ) is one or more discrete data centers within an AWS Region. Each AZ is an isolated location with independent power, cooling, networking, and physical security. They are physically separated from each other by a meaningful distance (typically several kilometers or miles) to minimize the risk of a single event (like a power outage, fire, or natural disaster) affecting multiple AZs.    
 
