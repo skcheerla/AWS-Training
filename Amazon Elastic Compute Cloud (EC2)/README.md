@@ -45,7 +45,8 @@ Oracle Linux AMI: ec2-user
 Bitnami AMIs: bitnami  
 Rocky Linux: rocky   
 
-**InstanceType**
+**InstanceType**  
+
 In Amazon Web Services (AWS), an instance type defines the virtual hardware configuration of an EC2 instance (your virtual server). When you launch an EC2 instance, you choose an instance type that specifies:
 
 Number of vCPUs: Virtual CPUs (cores) available to the instance.  
