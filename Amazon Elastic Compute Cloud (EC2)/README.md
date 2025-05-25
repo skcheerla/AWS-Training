@@ -7,6 +7,6 @@
     **Resource tags**  
         A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define.
 
-**    **Key** **- Up to 128 Unicode characters in UTF-8  
+    **Key**- Up to 128 Unicode characters in UTF-8  
     **Value** -Optional tag value up to 256 characters in UTF-8  
     **Resource types** - The resource type on which the tag will be created when an instance is launched from the launch template.  
