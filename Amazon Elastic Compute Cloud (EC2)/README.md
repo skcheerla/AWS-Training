@@ -53,7 +53,7 @@ In Amazon Web Services (AWS), an instance type defines the virtual hardware conf
 
 **Amount of Memory (RAM):** The amount of RAM (in GiB) allocated to the instance.  
 
-**Storage Options:**
+**Storage Options:**  
 EBS-backed: Uses Amazon Elastic Block Store (EBS) for persistent block storage.  
 
 Instance Store: Provides temporary, block-level storage directly attached to the host computer. This storage is ephemeral, meaning data is lost when the instance is stopped or terminated.  
