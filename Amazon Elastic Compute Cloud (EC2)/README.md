@@ -1,16 +1,16 @@
- #Amazon Elastic Compute Cloud (EC2)
+ # Amazon Elastic Compute Cloud (EC2)
 
 **Create, manage, and monitor virtual servers in the cloud.**
     Amazon Elastic Compute Cloud (Amazon EC2) offers the broadest and deepest compute platform, with over 750 instances and choice of the latest processor, storage, networking, operating system, and purchase model to help you best match the needs of your workload. Amazon the first major cloud provider that supports Intel, AMD, and Arm processors, the only cloud with on-demand EC2 Mac instances, and the only cloud with 400 Gbps Ethernet networking. Amazon offer the best price performance for machine learning training, as well as the lowest cost per inference instances in the cloud. More SAP, high performance computing (HPC), ML, and Windows workloads run on AWS than any other cloud.
 
-**Names and Tags**  
+# Names and Tags  
     **Resource tags**  
         A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define.  
     **Key**- Up to 128 Unicode characters in UTF-8  
     **Value** -Optional tag value up to 256 characters in UTF-8  
     **Resource types** - The resource type on which the tag will be created when an instance is launched from the launch template.  
     
-   **Amazon Machine Image (AMI)**  
+   # Amazon Machine Image (AMI) 
    An AMI is a template that contains the software configuration (operating system, application server, and applications) required to launch your instance.  
    An AMI is specific to the following:  
      Region  
@@ -29,7 +29,7 @@
 
 ![image](https://github.com/user-attachments/assets/18e00723-dff0-46ed-bec4-9d0dd9565920)  
 
-**Username**  
+# Username
 When you launch an Amazon EC2 instance from an Amazon Machine Image (AMI), the AMI determines the default username you use to connect to that instance. This username is often tied to the operating system or the specific distribution the AMI is based on.
 
 Here are the common default usernames for various AWS AMIs:
@@ -45,7 +45,7 @@ Oracle Linux AMI: ec2-user
 Bitnami AMIs: bitnami  
 Rocky Linux: rocky   
 
-**InstanceType**  
+# InstanceType  
 
 In Amazon Web Services (AWS), an instance type defines the virtual hardware configuration of an EC2 instance (your virtual server). When you launch an EC2 instance, you choose an instance type that specifies:
 
