@@ -165,7 +165,7 @@ When you try to connect to that instance (e.g., via SSH for Linux), your SSH cli
 The EC2 instance uses its public key (which matches your private key) to decrypt your credentials and authenticate you.  
 Because the public and private keys are mathematically linked, but the private key cannot be derived from the public key, this provides a highly secure authentication mechanism without transmitting passwords over the network.  
 
-## Why is it Important? 
+###  Why Key Pair is it Important? 
 
 **Security:** It's the primary and most secure method for logging into Linux EC2 instances. It's much more secure than password-based authentication, which is susceptible to brute-force attacks.  
 
