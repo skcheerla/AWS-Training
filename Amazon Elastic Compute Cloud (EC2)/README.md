@@ -84,13 +84,14 @@ Use Cases: Web servers, application servers, development environments, small and
 **A-series (A1):**  Powered by AWS Graviton (ARM-based) processors, offering cost savings for scale-out workloads.    
 **Mac Instances (Mac1, Mac2):** Dedicated macOS instances for developing, building, testing, and signing Apple applications.  
 
-2. **Compute Optimized Instances (High CPU)**    
+**2. Compute Optimized Instances (High CPU) **       
 
 Characteristics: Ideal for compute-intensive applications that benefit from high-performance processors.  
 Use Cases: High-performance web servers, scientific modeling, batch processing, media transcoding, gaming servers, high-performance computing (HPC), machine learning inference.  
 Examples:
-C-series (C5, C6g, C6i, C7g, C7i): Offer a high ratio of vCPUs to memory. C6g and C7g use AWS Graviton processors.
-Memory Optimized Instances (High RAM)
+C-series (C5, C6g, C6i, C7g, C7i): Offer a high ratio of vCPUs to memory. C6g and C7g use AWS Graviton processors.  
+
+**3. Memory Optimized Instances (High RAM)**  
 
 Characteristics: Designed for workloads that process large in-memory datasets.
 Use Cases: High-performance databases (e.g., SAP HANA), in-memory caches (e.g., Redis, Memcached), big data analytics (e.g., Apache Spark), real-time processing of large unstructured data.  
@@ -101,7 +102,7 @@ Use Cases: High-performance databases (e.g., SAP HANA), in-memory caches (e.g., 
 **High Memory Instances (U-series):** Specifically designed for very large SAP HANA deployments, offering terabytes of memory.  
 **Z-series (z1d):** Combines high compute performance with a high memory-to-vCPU ratio, ideal for electronic design automation (EDA) and relational databases with high per-core licensing costs.
 
-**3. Storage Optimized Instances (High I/O Performance)**  
+**4. Storage Optimized Instances (High I/O Performance)**  
 
 Characteristics: Optimized for workloads that require high sequential read and write access to very large datasets, often with local NVMe SSD storage.  
 Use Cases: NoSQL databases (e.g., Cassandra, MongoDB), data warehousing, distributed file systems (e.g., HDFS), log processing, search engines, analytics workloads.  
@@ -113,7 +114,7 @@ Use Cases: NoSQL databases (e.g., Cassandra, MongoDB), data warehousing, distrib
 **H-series (H1):** High-throughput instances for distributed file systems and data warehousing.  
 **Im4gn/Is4gen:** Graviton-powered instances with NVMe SSDs, optimized for dense storage and I/O.  
 
-**4. Accelerated Computing Instances (Hardware Accelerators)**  
+**5. Accelerated Computing Instances (Hardware Accelerators)**  
 
 Characteristics: Utilize hardware accelerators (GPUs, FPGAs, AWS Inferentia, AWS Trainium) to perform functions like floating-point calculations, graphics processing, or data pattern matching more efficiently than CPUs alone.  
 Use Cases: Machine learning (training and inference), high-performance computing (HPC), graphics rendering, video processing, scientific simulations.  
@@ -127,7 +128,7 @@ Use Cases: Machine learning (training and inference), high-performance computing
 **Trn-series (Trn1, Trn1n):** Powered by AWS Trainium chips, purpose-built for high-performance deep learning training.  
 **VT-series (VT1):** Optimized for high-performance video transcoding.  
 
-**5. High Performance Computing (HPC) Optimized Instances**  
+**6. High Performance Computing (HPC) Optimized Instances**  
 
 Characteristics: Designed for tightly coupled HPC workloads that require high-performance processors and very high network throughput, often with Elastic Fabric Adapter (EFA).  
 Use Cases: Complex scientific simulations, computational fluid dynamics, weather modeling, financial modeling.  
