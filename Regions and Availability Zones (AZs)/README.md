@@ -41,9 +41,11 @@ However, AZs within the same Region are interconnected with high-bandwidth, low-
 **No Inter-AZ Data Transfer Costs (generally):** Data transfer between AZs within the same Region is generally free for many services, making it cost-effective to build highly available architectures.  
 **Examples of AZ names (within us-east-1):**  
 
-us-east-1a
-us-east-1b
-us-east-1c (Note: The physical mapping of these letter identifiers to actual data centers is randomized per AWS account to ensure a more even distribution of resources across the underlying infrastructure.)  
+us-east-1a  
+us-east-1b  
+us-east-1c  
+
+(Note: The physical mapping of these letter identifiers to actual data centers is randomized per AWS account to ensure a more even distribution of resources across the underlying infrastructure.)  
 
 ## Relationship between Regions and AZs  
 
