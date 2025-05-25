@@ -4,7 +4,7 @@
     Amazon Elastic Compute Cloud (Amazon EC2) offers the broadest and deepest compute platform, with over 750 instances and choice of the latest processor, storage, networking, operating system, and purchase model to help you best match the needs of your workload. Amazon the first major cloud provider that supports Intel, AMD, and Arm processors, the only cloud with on-demand EC2 Mac instances, and the only cloud with 400 Gbps Ethernet networking. Amazon offer the best price performance for machine learning training, as well as the lowest cost per inference instances in the cloud. More SAP, high performance computing (HPC), ML, and Windows workloads run on AWS than any other cloud.
 
 # Names and Tags  
-    **Resource tags**  
+   **Resource tags**  
         A tag is a label that you assign to an AWS resource. Each tag consists of a key and an optional value, both of which you define.  
     **Key**- Up to 128 Unicode characters in UTF-8  
     **Value** -Optional tag value up to 256 characters in UTF-8  
@@ -68,7 +68,7 @@ The network bandwidth available to the instance (e.g., "up to 10 Gigabit," "25 G
 AWS offers a vast array of instance types, each optimized for different use cases and workloads. They are grouped into instance families based on their primary characteristics and performance profiles.
 
 
-**AWS EC2 Instance Families and Their Use Cases:**  
+## AWS EC2 Instance Families and Their Use Cases 
 
 Here's a breakdown of the main instance families and their typical use cases:
 
@@ -136,7 +136,7 @@ Use Cases: Complex scientific simulations, computational fluid dynamics, weather
 **Examples:**   
 **Hpc-series (Hpc6a, Hpc6id, Hpc7a, Hpc7g):** Specific instance types built for HPC.  
 
-**Key Pair**    
+# Key Pair   
 In AWS, an EC2 Key Pair is a set of security credentials that you use to prove your identity when connecting to your EC2 instances. It's a critical component for secure access, especially to Linux instances via SSH.    
 
 **Here's a breakdown of what a key pair is and how it works:**    
@@ -165,7 +165,7 @@ When you try to connect to that instance (e.g., via SSH for Linux), your SSH cli
 The EC2 instance uses its public key (which matches your private key) to decrypt your credentials and authenticate you.  
 Because the public and private keys are mathematically linked, but the private key cannot be derived from the public key, this provides a highly secure authentication mechanism without transmitting passwords over the network.  
 
-**Why is it Important?**  
+## Why is it Important? 
 
 **Security:** It's the primary and most secure method for logging into Linux EC2 instances. It's much more secure than password-based authentication, which is susceptible to brute-force attacks.  
 
