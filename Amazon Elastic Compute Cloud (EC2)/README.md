@@ -82,9 +82,9 @@ Use Cases: Web servers, application servers, development environments, small and
 **M-series (M5, M6g, M6i, M7g, M7i):**  The most common general-purpose choice, offering a good balance. M6g and M7g use AWS Graviton processors (ARM-based), which can offer better price-performance for many workloads.    
 **T-series (T2, T3, T3a, T4g):**  Burstable performance instances. These provide a baseline level of CPU performance with the ability to burst above the baseline when needed (using CPU credits). Ideal for applications with variable CPU usage like dev/test environments, small web servers, and low-traffic applications. T4g uses AWS Graviton processors.    
 **A-series (A1):**  Powered by AWS Graviton (ARM-based) processors, offering cost savings for scale-out workloads.    
-**Mac Instances (Mac1, Mac2):** Dedicated macOS instances for developing, building, testing, and signing Apple applications.  
+**Mac Instances (Mac1, Mac2):** Dedicated macOS instances for developing, building, testing, and signing Apple applications.    
 
-**2. Compute Optimized Instances (High CPU) **       
+**2.Compute Optimized Instances (High CPU)**       
 
 Characteristics: Ideal for compute-intensive applications that benefit from high-performance processors.  
 Use Cases: High-performance web servers, scientific modeling, batch processing, media transcoding, gaming servers, high-performance computing (HPC), machine learning inference.  
