@@ -54,15 +54,17 @@ In Amazon Web Services (AWS), an instance type defines the virtual hardware conf
 **Amount of Memory (RAM):** The amount of RAM (in GiB) allocated to the instance.  
 
 **Storage Options:**  
-EBS-backed: Uses Amazon Elastic Block Store (EBS) for persistent block storage.  
 
-Instance Store: Provides temporary, block-level storage directly attached to the host computer. This storage is ephemeral, meaning data is lost when the instance is stopped or terminated.  
+**EBS-backed:** Uses Amazon Elastic Block Store (EBS) for persistent block storage.  
 
-NVMe SSDs: High-performance local storage.  
+**Instance Store:** Provides temporary, block-level storage directly attached to the host computer. This storage is ephemeral, meaning data is lost when the instance is stopped or terminated.  
 
-**Network Performance:** The network bandwidth available to the instance (e.g., "up to 10 Gigabit," "25 Gigabit").  
-Processor Family: Whether it uses Intel, AMD, or AWS Graviton (ARM-based) processors.  
-Other features: Such as support for Elastic Fabric Adapter (EFA) for high-performance computing, or specific instruction sets.  
+**NVMe SSDs:** High-performance local storage.  
+
+**Network Performance:**  
+The network bandwidth available to the instance (e.g., "up to 10 Gigabit," "25 Gigabit").  
+**Processor Family:** Whether it uses Intel, AMD, or AWS Graviton (ARM-based) processors.  
+**Other features:** Such as support for Elastic Fabric Adapter (EFA) for high-performance computing, or specific instruction sets.  
 AWS offers a vast array of instance types, each optimized for different use cases and workloads. They are grouped into instance families based on their primary characteristics and performance profiles.
 
 
@@ -78,14 +80,16 @@ Use Cases: Web servers, application servers, development environments, small and
 
 **Examples:**  
 
-M-series (M5, M6g, M6i, M7g, M7i): The most common general-purpose choice, offering a good balance. M6g and M7g use AWS Graviton processors (ARM-based), which can offer better price-performance for many workloads.  
+    **M-series (M5, M6g, M6i, M7g, M7i):**  The most common general-purpose choice, offering a good balance. M6g and M7g use AWS Graviton processors (ARM-based), which can offer better price-performance for many workloads.  
 
-T-series (T2, T3, T3a, T4g): Burstable performance instances. These provide a baseline level of CPU performance with the ability to burst above the baseline when needed (using CPU credits). Ideal for applications with variable CPU usage like dev/test environments, small web servers, and low-traffic applications. T4g uses AWS Graviton processors.  
+    **T-series (T2, T3, T3a, T4g):**  Burstable performance instances. These provide a baseline level of CPU performance with the ability to burst above the baseline when needed (using CPU credits). Ideal for applications with variable CPU usage like dev/test environments, small web servers, and low-traffic applications. T4g uses AWS Graviton processors.  
 
 
-A-series (A1): Powered by AWS Graviton (ARM-based) processors, offering cost savings for scale-out workloads.    
-Mac Instances (Mac1, Mac2): Dedicated macOS instances for developing, building, testing, and signing Apple applications.    
-**Compute Optimized Instances (High CPU)**  
+**A-series (A1):**  Powered by AWS Graviton (ARM-based) processors, offering cost savings for scale-out workloads.  
+
+**Mac Instances (Mac1, Mac2): ** Dedicated macOS instances for developing, building, testing, and signing Apple applications.  
+
+2. **Compute Optimized Instances (High CPU)**  
 
 Characteristics: Ideal for compute-intensive applications that benefit from high-performance processors.
 Use Cases: High-performance web servers, scientific modeling, batch processing, media transcoding, gaming servers, high-performance computing (HPC), machine learning inference.
