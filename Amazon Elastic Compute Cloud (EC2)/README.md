@@ -24,7 +24,8 @@
     
 **MY AMIS** - Private AMIs you've created or AMIs shared with you by another AWS account.  
 **AWS Marketplace AMIs** - Publicly available AMIs published by AWS or trusted third parties.  
-You can launch multiple instances from a single AMI when you require multiple instances with the same configuration. You can use different AMIs to launch instances when you require instances with different configurations, as shown in the following diagram.
+  
+  You can launch multiple instances from a single AMI when you require multiple instances with the same configuration. You can use different AMIs to launch instances when you require instances with different configurations, as shown in the following diagram.
 
 ![image](https://github.com/user-attachments/assets/18e00723-dff0-46ed-bec4-9d0dd9565920)
 
