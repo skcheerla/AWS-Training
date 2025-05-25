@@ -28,30 +28,31 @@ ap-southeast-1 (Singapore)
 
 ## 2. Availability Zone (AZ)  
 
-An Availability Zone (AZ) is one or more discrete data centers within an AWS Region. Each AZ is an isolated location with independent power, cooling, networking, and physical security. They are physically separated from each other by a meaningful distance (typically several kilometers or miles) to minimize the risk of a single event (like a power outage, fire, or natural disaster) affecting multiple AZs.    
+An Availability Zone (AZ) is one or more discrete data centers within an AWS Region. Each AZ is an isolated location with independent power, cooling, networking, and physical security. They are physically separated from each other by a meaningful distance (typically several kilometers or miles) to minimize the risk of a single event (like a power outage, fire, or natural disaster) affecting multiple AZs.     
 
-However, AZs within the same Region are interconnected with high-bandwidth, low-latency, and fully redundant network connections. This allows you to build applications that span multiple AZs within a Region, enabling synchronous replication and quick failover.  
+However, AZs within the same Region are interconnected with high-bandwidth, low-latency, and fully redundant network connections. This allows you to build applications that span multiple AZs within a Region, enabling synchronous replication and quick failover.    
 
-**Key characteristics and reasons for using multiple AZs:**  
+**Key characteristics and reasons for using multiple AZs:**    
 
-**High Availability:** By distributing your application's components across multiple AZs within a Region, you can ensure that if one AZ experiences an outage, your application can continue to run uninterrupted in the other AZs. This is crucial for achieving high uptime.
-**Fault Tolerance:** AZs are designed to be isolated failure domains. A failure in one AZ is unlikely to impact other AZs in the same Region.
-**Scalability:** You can easily scale your application by deploying more instances or resources across multiple AZs, distributing the load and improving performance.
-**Network Performance:** The low-latency connectivity between AZs allows for synchronous data replication (e.g., for databases) and efficient traffic distribution by load balancers.
-**No Inter-AZ Data Transfer Costs (generally):** Data transfer between AZs within the same Region is generally free for many services, making it cost-effective to build highly available architectures.
-**Examples of AZ names (within us-east-1):**
+**High Availability:** By distributing your application's components across multiple AZs within a Region, you can ensure that if one AZ experiences an outage, your application can continue to run uninterrupted in the other AZs. This is crucial for achieving high uptime.  
+**Fault Tolerance:** AZs are designed to be isolated failure domains. A failure in one AZ is unlikely to impact other AZs in the same Region.  
+**Scalability:** You can easily scale your application by deploying more instances or resources across multiple AZs, distributing the load and improving performance.  
+**Network Performance:** The low-latency connectivity between AZs allows for synchronous data replication (e.g., for databases) and efficient traffic distribution by load balancers.  
+**No Inter-AZ Data Transfer Costs (generally):** Data transfer between AZs within the same Region is generally free for many services, making it cost-effective to build highly available architectures.  
+**Examples of AZ names (within us-east-1):**  
 
 us-east-1a
 us-east-1b
-us-east-1c (Note: The physical mapping of these letter identifiers to actual data centers is randomized per AWS account to ensure a more even distribution of resources across the underlying infrastructure.)
+us-east-1c (Note: The physical mapping of these letter identifiers to actual data centers is randomized per AWS account to ensure a more even distribution of resources across the underlying infrastructure.)  
 
-**Relationship between Regions and AZs:**
-**Regions contain multiple AZs:** Each AWS Region has at least three (and often more) distinct Availability Zones.
-**AZs are isolated within a Region:** While connected, they are designed not to fail together.
-**Resources are deployed within AZs:** When you launch an EC2 instance or create a database, you typically select the specific AZ where it will reside (or let AWS manage it across AZs for highly available services like RDS Multi-AZ).
-**Why are they important for your cloud strategy?**
-Understanding Regions and AZs is crucial for designing resilient, scalable, and performant applications on AWS.
+## Relationship between Regions and AZs  
 
-**For High Availability and Fault Tolerance (within a Region):** You would deploy your application across multiple Availability Zones within a single Region. For example, run your web servers in us-east-1a and us-east-1b, and your database in a Multi-AZ configuration within the same Region.
+**Regions contain multiple AZs:** Each AWS Region has at least three (and often more) distinct Availability Zones.  
+**AZs are isolated within a Region:** While connected, they are designed not to fail together.  
+**Resources are deployed within AZs:** When you launch an EC2 instance or create a database, you typically select the specific AZ where it will reside (or let AWS manage it across AZs for highly available services like RDS Multi-AZ).  
+**Why are they important for your cloud strategy?**  
+Understanding Regions and AZs is crucial for designing resilient, scalable, and performant applications on AWS.  
 
-**For Disaster Recovery and Global Reach (across Regions):** For mission-critical applications that require the absolute highest level of availability and disaster recovery, or to serve a global user base with low latency, you would deploy your application across multiple AWS Regions.
+**For High Availability and Fault Tolerance (within a Region):** You would deploy your application across multiple Availability Zones within a single Region. For example, run your web servers in us-east-1a and us-east-1b, and your database in a Multi-AZ configuration within the same Region.  
+
+**For Disaster Recovery and Global Reach (across Regions):** For mission-critical applications that require the absolute highest level of availability and disaster recovery, or to serve a global user base with low latency, you would deploy your application across multiple AWS Regions.  
