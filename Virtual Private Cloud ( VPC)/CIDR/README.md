@@ -15,12 +15,12 @@ Network part: First 8 bits
 Host part: Last 24 bits
 Example: 10.0.0.0 (millions of possible hosts)
 
-Class B: Medium-sized networks.
+**Class B:** Medium-sized networks.
 Network part: First 16 bits
 Host part: Last 16 bits
 Example: 172.16.0.0 (tens of thousands of possible hosts)
 
-Class C: Small networks, many networks, few hosts per network.
+**Class C**: Small networks, many networks, few hosts per network.
 Network part: First 24 bits
 Host part: Last 8 bits
 Example: 192.168.1.0 (254 possible hosts)
@@ -43,7 +43,7 @@ IP_Address/Prefix_Length
 
 Examples:
 
-192.168.1.0/24
+**192.168.1.0/24**
 
 This means the first 24 bits of the IP address (192.168.1) are for the network.
 
@@ -52,22 +52,23 @@ The remaining 8 bits (32 - 24 = 8) are for hosts.
 This is equivalent to a traditional Class C network with a subnet mask of 255.255.255.0.
 
 
-It allows for 2<sup>8</sup> - 2=254 usable host addresses (subtracting network and broadcast addresses).
+It allows for **2<sup>8</sup> - 2=254** usable host addresses (subtracting network and broadcast addresses).
 10.0.0.0/8
 
 The first 8 bits (10) are for the network.
 The remaining 24 bits are for hosts.
 This is equivalent to a traditional Class A network with a subnet mask of 255.0.0.0.
-It allows for 2<sup>24</sup> - 2 usable host addresses.
+It allows for **2<sup>24</sup> - 2** usable host addresses.
 172.16.0.0/20
 
 This is where CIDR's flexibility shines. The first 20 bits define the network.
 The remaining 12 bits (32 - 20 = 12) are for hosts.
-This allows for 2<sup>12</sup> - 2=4094 usable host addresses. This network size is not possible with the fixed classful system.
-Benefits of CIDR:
+This allows for **2<sup>12</sup> - 2=4094** usable host addresses. This network size is not possible with the fixed classful system.
 
-Efficient IP Address Allocation: Organizations can be assigned exactly the number of IP addresses they need, preventing the wastage seen with classful addressing. This was vital in slowing down the exhaustion of IPv4 addresses.
-Reduced Routing Table Size (Supernetting/Route Aggregation): Routers don't need an entry for every single network. With CIDR, multiple smaller networks (subnets) can be "supernetted" or aggregated into a single, larger CIDR block. This single entry in the router's table can represent many individual networks, significantly reducing the size and complexity of routing tables, which makes routing more efficient.
+# Benefits of CIDR:
 
-Improved Routing Efficiency: Smaller routing tables mean faster lookups and better performance for routers.
-Flexibility in Network Design: Network administrators can design more granular and efficient network structures by creating subnets of various sizes to meet specific organizational needs.
+**Efficient IP Address Allocation:** Organizations can be assigned exactly the number of IP addresses they need, preventing the wastage seen with classful addressing. This was vital in slowing down the exhaustion of IPv4 addresses.
+**Reduced Routing Table Size (Supernetting/Route Aggregation):** Routers don't need an entry for every single network. With CIDR, multiple smaller networks (subnets) can be "supernetted" or aggregated into a single, larger CIDR block. This single entry in the router's table can represent many individual networks, significantly reducing the size and complexity of routing tables, which makes routing more efficient.
+
+**Improved Routing Efficiency:** Smaller routing tables mean faster lookups and better performance for routers.
+**Flexibility in Network Design:** Network administrators can design more granular and efficient network structures by creating subnets of various sizes to meet specific organizational needs.
