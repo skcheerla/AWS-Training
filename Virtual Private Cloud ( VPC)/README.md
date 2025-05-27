@@ -13,17 +13,9 @@ Amazon Virtual Private Cloud (Amazon VPC) is a foundational service in Amazon We
 
 **IP Address Range (CIDR Block):** You define the IP address range for your VPC using Classless Inter-Domain Routing (CIDR) notation (e.g., 10.0.0.0/16). This range determines the pool of private IP addresses available for your resources.  
 
-### Private IP Address  
-
-![image](https://github.com/user-attachments/assets/cf69b6ef-fcef-4302-b21e-168f4d04cf80)
-
  
 **Subnets:** You can divide your VPC's IP address range into smaller segments called subnets. Each subnet resides within a single Availability Zone (AZ), providing high availability and fault tolerance.  
 
-![image](https://github.com/user-attachments/assets/97496a5c-842b-49f4-a838-d4489fe74f26)
-
-
-  ![image](https://github.com/user-attachments/assets/57cc7dc5-583d-4c7d-96e8-1ee627c3989a)  
   
 **Route Tables:** These tables contain rules that determine where network traffic from your subnets is directed (e.g., to the internet, to other VPCs, or to your on-premises network).
 
