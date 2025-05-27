@@ -1,1 +1,33 @@
 
+# Public IP Address
+Definition: A public IP address is a unique identifier assigned to your network's router by your Internet Service Provider (ISP). It's the address that allows your network to communicate with the rest of the internet.
+
+Scope: Global. It's visible and reachable by any device on the internet.
+Uniqueness: Every public IP address on the internet is unique. No two devices connected directly to the internet can have the same public IP address at the same time.
+Purpose: To enable your entire network (and the devices within it) to connect to the internet, access websites, send emails, stream content, and communicate with external servers. It's how internet traffic finds its way to and from your home or office network.
+Assignment: Assigned by your Internet Service Provider (ISP). It can be: 
+Dynamic: Most common for home users. The IP address can change periodically (e.g., when your router reboots or your ISP renews the lease).
+Static: Less common for home users, more common for businesses or servers. The IP address remains constant, which is useful for hosting websites or providing remote access.
+Accessibility: Directly accessible from the internet. If you host a web server or a game server, it would need a public IP address (or be accessible through port forwarding on a public IP) to be reached by others on the internet.
+Example: When you Google "What is my IP address?", the address it shows you is your public IP address.
+Private IP Address
+Definition: A private IP address is a unique identifier assigned to devices within your local network (e.g., your home, office, or school network) by your router.
+Scope: Local. It's only visible and reachable by other devices within the same private network.
+Uniqueness: Private IP addresses are only unique within their own local network. The same private IP address (e.g., 192.168.1.100) can be used in millions of different private networks around the world without conflict.
+
+Purpose: To allow devices within your local network (computers, smartphones, printers, smart TVs, etc.) to communicate with each other. For example, your computer can send a document to your printer using their private IP addresses.
+Assignment: Assigned by your router (or a DHCP server within your local network).
+Reserved Ranges: To ensure they don't conflict with public IP addresses, specific ranges of IP addresses are reserved for private use by the Internet Assigned Numbers Authority (IANA). These include: 
+Class A: 10.0.0.0 to 10.255.255.255
+Class B: 172.16.0.0 to 172.31.255.255
+Class C: 192.168.0.0 to 192.168.255.255
+Most home networks use the 192.168.x.x range.
+Accessibility: Cannot be directly accessed from the internet. This is a crucial security feature. To allow a device with a private IP address to communicate with the internet, a process called Network Address Translation (NAT) is used by your router.
+The Role of NAT (Network Address Translation)
+NAT is the technology that bridges the gap between private and public IP addresses. When a device on your private network wants to access the internet:
+
+It sends a request using its private IP address to the router.
+The router takes that request and rewrites the source IP address from the device's private IP to the router's public IP address.
+The request goes out to the internet with the public IP address.
+When the internet server sends a response, it sends it back to your router's public IP address.
+The router, using its NAT table, remembers which internal device originally made the request and forwards the response to that device's private IP address.
