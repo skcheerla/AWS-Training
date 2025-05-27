@@ -20,7 +20,10 @@ Amazon Virtual Private Cloud (Amazon VPC) is a foundational service in Amazon We
 
 
 
-**Subnets:** You can divide your VPC's IP address range into smaller segments called subnets. Each subnet resides within a single Availability Zone (AZ), providing high availability and fault tolerance.
+**Subnets:** You can divide your VPC's IP address range into smaller segments called subnets. Each subnet resides within a single Availability Zone (AZ), providing high availability and fault tolerance.  
+
+![image](https://github.com/user-attachments/assets/97496a5c-842b-49f4-a838-d4489fe74f26)
+
 
 **Route Tables:** These tables contain rules that determine where network traffic from your subnets is directed (e.g., to the internet, to other VPCs, or to your on-premises network).
 
