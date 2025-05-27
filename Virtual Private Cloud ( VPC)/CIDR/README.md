@@ -5,7 +5,7 @@
 
 To understand why CIDR was developed and why it's so important, it's helpful to know a little about the old classful system:  
 
-**The Problem with Classful Addressing (Pre-CIDR):**  
+# The Problem with Classful Addressing (Pre-CIDR):
 
 Before CIDR, IP addresses (specifically IPv4 addresses, which are 32-bit numbers like 192.168.1.1) were divided into **fixed "classes" (Class A, B, and C)**. Each class had a predefined number of bits for the **network portion** and the **host portion** of the IP address:  
 
