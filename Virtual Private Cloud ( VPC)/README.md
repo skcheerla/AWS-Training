@@ -17,6 +17,9 @@ Amazon Virtual Private Cloud (Amazon VPC) is a foundational service in Amazon We
 
 ![image](https://github.com/user-attachments/assets/cf69b6ef-fcef-4302-b21e-168f4d04cf80)
 
+ 
+![image](https://github.com/user-attachments/assets/57cc7dc5-583d-4c7d-96e8-1ee627c3989a)
+
 
 
 
