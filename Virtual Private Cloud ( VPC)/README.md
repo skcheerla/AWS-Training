@@ -17,7 +17,8 @@ Classful Description	IP Address Range (Decimal)	CIDR Block	Number of Addresses	T
 Class A	10.0.0.0 - 10.255.255.255	10.0.0.0/8	1,67,77,216	Large organizations, large private networks
 Class B	172.16.0.0 - 172.31.255.255	172.16.0.0/12	10,48,576	Medium-sized organizations, larger home networks
 Class C	192.168.0.0 - 192.168.255.255	192.168.0.0/16	65,536	Small office/home office (SOHO) networks, small businesses
-![image](https://github.com/user-attachments/assets/369c73ae-02d3-4ceb-bcc8-3326cde70172)
+![image](https://github.com/user-attachments/assets/9b1a7176-e94d-4746-bfc1-658d7fef7545)
+
 
 
 **Subnets:** You can divide your VPC's IP address range into smaller segments called subnets. Each subnet resides within a single Availability Zone (AZ), providing high availability and fault tolerance.
