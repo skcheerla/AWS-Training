@@ -52,7 +52,7 @@ The remaining 8 bits (32 - 24 = 8) are for hosts.
 This is equivalent to a traditional Class C network with a subnet mask of 255.255.255.0.
 
 
-It allows for 2^8 -2=254 usable host addresses (subtracting network and broadcast addresses).
+It allows for 2<sup>8</sup> - 2=254 usable host addresses (subtracting network and broadcast addresses).
 10.0.0.0/8
 
 The first 8 bits (10) are for the network.
