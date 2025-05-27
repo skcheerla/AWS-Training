@@ -9,6 +9,8 @@ To understand why CIDR was developed and why it's so important, it's helpful to 
 
 Before CIDR, IP addresses (specifically IPv4 addresses, which are 32-bit numbers like 192.168.1.1) were divided into **fixed "classes" (Class A, B, and C)**. Each class had a predefined number of bits for the **network portion** and the **host portion** of the IP address:  
 
+![image](https://github.com/user-attachments/assets/cf69b6ef-fcef-4302-b21e-168f4d04cf80)
+
 
 **Class A:** Very large networks, few networks, many hosts per network.
 Network part: First 8 bits
@@ -64,6 +66,11 @@ It allows for **2<sup>24</sup> - 2** usable host addresses.
 This is where CIDR's flexibility shines. The first 20 bits define the network.
 The remaining 12 bits (32 - 20 = 12) are for hosts.
 This allows for **2<sup>12</sup> - 2=4094** usable host addresses. This network size is not possible with the fixed classful system.
+
+![image](https://github.com/user-attachments/assets/97496a5c-842b-49f4-a838-d4489fe74f26)
+
+
+  ![image](https://github.com/user-attachments/assets/57cc7dc5-583d-4c7d-96e8-1ee627c3989a) 
 
 # Benefits of CIDR:
 
