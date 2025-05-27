@@ -67,8 +67,10 @@ This allows for **2<sup>12</sup> - 2=4094** usable host addresses. This network 
 
 # Benefits of CIDR:
 
-**Efficient IP Address Allocation:** Organizations can be assigned exactly the number of IP addresses they need, preventing the wastage seen with classful addressing. This was vital in slowing down the exhaustion of IPv4 addresses.
-**Reduced Routing Table Size (Supernetting/Route Aggregation):** Routers don't need an entry for every single network. With CIDR, multiple smaller networks (subnets) can be "supernetted" or aggregated into a single, larger CIDR block. This single entry in the router's table can represent many individual networks, significantly reducing the size and complexity of routing tables, which makes routing more efficient.
+**Efficient IP Address Allocation:** Organizations can be assigned exactly the number of IP addresses they need, preventing the wastage seen with classful addressing. This was vital in slowing down the exhaustion of IPv4 addresses.  
 
-**Improved Routing Efficiency:** Smaller routing tables mean faster lookups and better performance for routers.
+**Reduced Routing Table Size (Supernetting/Route Aggregation):** Routers don't need an entry for every single network. With CIDR, multiple smaller networks (subnets) can be "supernetted" or aggregated into a single, larger CIDR block. This single entry in the router's table can represent many individual networks, significantly reducing the size and complexity of routing tables, which makes routing more efficient.  
+
+**Improved Routing Efficiency:** Smaller routing tables mean faster lookups and better performance for routers.  
+
 **Flexibility in Network Design:** Network administrators can design more granular and efficient network structures by creating subnets of various sizes to meet specific organizational needs.
