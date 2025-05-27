@@ -58,16 +58,12 @@ It allows for 2<sup>8</sup> - 2=254 usable host addresses (subtracting network a
 The first 8 bits (10) are for the network.
 The remaining 24 bits are for hosts.
 This is equivalent to a traditional Class A network with a subnet mask of 255.0.0.0.
-It allows for 2 
-24
- −2 usable host addresses.
+It allows for 2<sup>24</sup> - 2 usable host addresses.
 172.16.0.0/20
 
 This is where CIDR's flexibility shines. The first 20 bits define the network.
 The remaining 12 bits (32 - 20 = 12) are for hosts.
-This allows for 2 
-12
- −2=4094 usable host addresses. This network size is not possible with the fixed classful system.
+This allows for 2<sup>12</sup> - 2=4094 usable host addresses. This network size is not possible with the fixed classful system.
 Benefits of CIDR:
 
 Efficient IP Address Allocation: Organizations can be assigned exactly the number of IP addresses they need, preventing the wastage seen with classful addressing. This was vital in slowing down the exhaustion of IPv4 addresses.
