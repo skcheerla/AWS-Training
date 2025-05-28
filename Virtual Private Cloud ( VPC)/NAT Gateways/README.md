@@ -49,10 +49,13 @@ The NAT Gateway remembers the original private IP and port of the initiating ins
 
 # Key Characteristics and Benefits:
 
-**Managed Service:** AWS fully manages NAT Gateways, handling scaling, availability, and maintenance. You don't need to patch or manage servers.
-**High Availability:** NAT Gateways are highly available within an Availability Zone (AZ). For cross-AZ redundancy, it's best practice to deploy a NAT Gateway in each AZ where you have private subnets and configure route tables accordingly.
-**Scalability:** Automatically scales to handle high volumes of traffic.
-**Security:** Allows outbound-only internet access. No unsolicited inbound connections can be initiated from the internet to instances behind a NAT Gateway, enhancing security.
+**Managed Service:** AWS fully manages NAT Gateways, handling scaling, availability, and maintenance. You don't need to patch or manage servers.  
+
+**High Availability:** NAT Gateways are highly available within an Availability Zone (AZ). For cross-AZ redundancy, it's best practice to deploy a NAT Gateway in each AZ where you have private subnets and configure route tables accordingly.  
+
+**Scalability:** Automatically scales to handle high volumes of traffic.  
+
+**Security:** Allows outbound-only internet access. No unsolicited inbound connections can be initiated from the internet to instances behind a NAT Gateway, enhancing security.  
 
 **Cost:** You are charged hourly for the NAT Gateway and for the data processed through it. This can become a significant cost factor in large deployments, leading to strategies like using VPC Endpoints for AWS services to bypass the NAT Gateway.
 
