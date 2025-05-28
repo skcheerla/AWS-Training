@@ -27,7 +27,9 @@ Amazon Virtual Private Cloud (Amazon VPC) is a foundational service in Amazon We
 
 **Network Access Control Lists (NACLs):** Operate as stateless firewalls at the subnet level, allowing or denying traffic based on rules. They are less granular than security groups.
 
-**VPC Peering:** Allows you to connect two VPCs (even across different AWS accounts) so that they can communicate with each other using private IP addresses as if they were on the same network.
+**VPC Peering:** Allows you to connect two VPCs (even across different AWS accounts) so that they can communicate with each other using private IP addresses as if they were on the same network.  
+
+**AWS Transit Gateway** is a fully managed service that acts as a central network hub that connects your Amazon Virtual Private Clouds (VPCs) and on-premises networks. It simplifies your network architecture, eliminates complex peering relationships, and makes it easier to scale and manage your network as it grows.  
 
 **VPN Connections (Site-to-Site VPN):** Establishes an encrypted connection between your VPC and your on-premises network.
 
