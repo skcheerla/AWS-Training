@@ -37,15 +37,15 @@ The private subnets' route tables are configured to send all internet-bound traf
 
 The public subnet's route table (where the NAT Gateway resides) must have a route for 0.0.0.0/0 (or ::/0) pointing to the Internet Gateway (IGW). This allows the NAT Gateway itself to reach the internet.  
 
-## Traffic Flow:  
+# Traffic Flow:  
 
-An instance in a private subnet wants to reach the internet.  
+An instance in a **private subnet wants to reach the internet**.  
 It sends the **traffic to the NAT Gateway** (according to its subnet's route table).  
-The NAT Gateway performs Network Address Translation (NAT), replacing the private IP address of the instance with its own **public Elastic IP address**.  
-The NAT Gateway then forwards this traffic to the **Internet Gateway**.  
-The Internet Gateway sends the traffic out to the **internet**.  
-When the response comes back from the internet, it goes to the NAT Gateway's EIP. 
-The NAT Gateway remembers the original private IP and port of the initiating instance and translates the response back, sending it to the correct private instance.  
+The **NAT Gateway performs Network Address Translation (NAT)**, replacing the private IP address of the instance with its own **public Elastic IP address**.  
+The **NAT Gateway** then forwards this traffic to the **Internet Gateway**.  
+The **Internet Gateway** sends the traffic out to the **internet**.  
+When the response comes **back from the internet**, it goes to the **NAT Gateway's EIP**. 
+**The NAT Gateway remembers the original private IP and port of the initiating instance and translates the response back**, sending it to the correct private instance.  
 
 # Key Characteristics and Benefits:
 
