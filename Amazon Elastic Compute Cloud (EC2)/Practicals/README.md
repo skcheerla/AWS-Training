@@ -55,31 +55,41 @@ This is the most common and recommended method.
 chmod 400 your-key-pair-name.pem
 ```
 
-(Replace your-key-pair-name.pem with the actual name of your key file.)
+(Replace your-key-pair-name.pem with the actual name of your key file.)  
 
-Construct the SSH command:
+**Construct the SSH command:**  
 
 Bash
 
 ssh -i /path/to/your-key-pair-name.pem ec2-user@your-instance-public-dns-or-ip
--i /path/to/your-key-pair-name.pem: Specifies the path to your private key file.
-ec2-user: This is the default username for Amazon Linux AMIs.
-For Ubuntu: ubuntu
-For RHEL: ec2-user or root
-For SUSE Linux: ec2-user or root
-For other distributions, check the AMI documentation for the default user.
-your-instance-public-dns-or-ip:
-You can find the Public IPv4 address or Public DNS (IPv4) of your EC2 instance in the AWS EC2 console, under the instance details.
-Example:
+-i /path/to/your-key-pair-name.pem: Specifies the path to your private key file.  
 
+ec2-user: This is the default username for Amazon Linux AMIs.  
+
+For Ubuntu: ubuntu  
+For RHEL: ec2-user or root  
+For SUSE Linux: ec2-user or root  
+For other distributions, check the AMI documentation for the default user.  
+
+your-instance-public-dns-or-ip:  
+
+You can find the Public IPv4 address or Public DNS (IPv4) of your EC2 instance in the AWS EC2 console, under the instance details.  
+
+Example:  
+```
 Bash
 
-ssh -i my-aws-key.pem ec2-user@ec2-54-123-45-678.compute-1.amazonaws.com
-or
+ssh -i my-aws-key.pem ec2-user@ec2-54-123-45-678.compute-1.amazonaws.com  
+```
 
+or  
+
+```
 Bash
 
-ssh -i my-aws-key.pem ec2-user@192.0.2.1
+ssh -i my-aws-key.pem ec2-user@192.0.2.1  
+```
+
 Confirm the connection:
 
 The first time you connect, you might see a message about the authenticity of the host. Type yes and press Enter to continue. This adds the host to your known_hosts file, so you won't be prompted again for that specific host.
