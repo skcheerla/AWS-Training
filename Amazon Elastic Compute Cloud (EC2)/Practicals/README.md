@@ -55,6 +55,8 @@ This is the most common and recommended method.
 ```Bash
 
 chmod 400 your-key-pair-name.pem```
+
+
  
 
 (Replace your-key-pair-name.pem with the actual name of your key file.)
