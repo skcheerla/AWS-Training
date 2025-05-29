@@ -7,24 +7,31 @@ Logging into a public subnet EC2 Linux host in AWS is typically done using SSH (
 ## 1. Running EC2 Instance in a Public Subnet:
 
 The EC2 instance must be launched in a public subnet within your VPC.  
-The public subnet's route table must have a route to an Internet Gateway (IGW) for 0.0.0.0/0 (or ::/0 for IPv6).  
+
+The public subnet's route table must have a route to an Internet Gateway (IGW) for 0.0.0.0/0 (or ::/0 for IPv6).   
+
 The EC2 instance needs a public IPv4 address or an Elastic IP address associated with it. If it doesn't have one, you won't be able to connect directly from the internet.  
 
 ## 2.Key Pair (.pem file):
 
-When you launch an EC2 instance, you associate a key pair with it. This key pair consists of a public key (stored by AWS) and a private key (which you download as a .pem file).  
-You must have the private key (.pem file) on your local machine where you intend to connect from.  
+When you launch an EC2 instance, you associate a key pair with it. This key pair consists of a public key (stored by AWS) and a private key (which you download as a .pem file).    
+
+You must have the private key (.pem file) on your local machine where you intend to connect from.   
+
 Permissions: On Linux/macOS, ensure the .pem file has restricted permissions (e.g., chmod 400 your-key-pair.pem). This prevents others from reading or modifying it.  
 
 ## 3. Security Group Configuration:
 
-The security group attached to your EC2 instance must allow inbound SSH traffic (TCP port 22) from your IP address or a range of IP addresses you want to allow.
-Best practice: Restrict inbound SSH to your specific public IP address to enhance security. If your IP address changes frequently, you might allow a wider range (e.g., 0.0.0.0/0), but this is less secure.  
+The security group attached to your EC2 instance must allow inbound SSH traffic (TCP port 22) from your IP address or a range of IP addresses you want to allow.  
+
+**Best practice:** Restrict inbound SSH to your specific public IP address to enhance security. If your IP address changes frequently, you might allow a wider range (e.g., 0.0.0.0/0), but this is less secure.    
 
 ## 4.SSH Client:
 
 You need an SSH client installed on your local computer.  
+
 **Linux/macOS:** OpenSSH client is usually pre-installed.  
+
 **Windows:**  
 Windows 10/11 and Windows Server 2019+ have OpenSSH client built-in. You can use PowerShell or Command Prompt.  
 
@@ -42,9 +49,7 @@ This is the most common and recommended method.
 
 2. Navigate to the directory where your .pem file is stored.  
 
-3. Set permissions for your private key (Linux/macOS only):  
-
-       
+3. Set permissions for your private key (Linux/macOS only):      
 
 Bash
 
