@@ -59,9 +59,10 @@ chmod 400 your-key-pair-name.pem
 
 **Construct the SSH command:**  
 
-Bash
-
+```bash
 ssh -i /path/to/your-key-pair-name.pem ec2-user@your-instance-public-dns-or-ip
+```
+
 -i /path/to/your-key-pair-name.pem: Specifies the path to your private key file.  
 
 ec2-user: This is the default username for Amazon Linux AMIs.  
@@ -75,18 +76,16 @@ your-instance-public-dns-or-ip:
 
 You can find the Public IPv4 address or Public DNS (IPv4) of your EC2 instance in the AWS EC2 console, under the instance details.  
 
-Example:  
-```
-Bash
+Example: 
+
+```bash
 
 ssh -i my-aws-key.pem ec2-user@ec2-54-123-45-678.compute-1.amazonaws.com  
 ```
 
 or  
 
-```
-Bash
-
+```bash
 ssh -i my-aws-key.pem ec2-user@192.0.2.1  
 ```
 
