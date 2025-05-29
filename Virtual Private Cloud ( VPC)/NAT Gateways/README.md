@@ -4,11 +4,7 @@ In AWS, a **NAT Gateway (Network Address Translation Gateway**) is a fully manag
 
 **Think of it like this:**  
 
-**Your Home Network:** You likely have a Wi-Fi router at home. All your devices (laptops, phones, smart TVs) have private IP addresses within your home network. When your laptop connects to a website on the internet, the router performs NAT, translating your laptop's private IP to the router's single public IP address. When the website sends a response, the router translates the public IP back to your laptop's private IP. This allows your devices to access the internet without being directly exposed to it.  
-
-**AWS VPC and NAT Gateway:** The concept is very similar in AWS.  
-
-**VPC (Virtual Private Cloud):** Your isolated virtual network in AWS.  
+**Your Home Network:** You likely have a Wi-Fi router at home. All your devices (laptops, phones, smart TVs) have private IP addresses within your home network. When your laptop connects to a website on the internet, the router performs NAT, translating your laptop's private IP to the router's single public IP address. When the website sends a response, the router translates the public IP back to your laptop's private IP. This allows your devices to access the internet without being directly exposed to it. 
 
 **Public Subnet:** A subnet whose route table has a direct route to an **Internet Gateway (IGW)**. Instances here can have public IP addresses and be directly accessible from the internet (if security groups allow).  
 
