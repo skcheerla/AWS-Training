@@ -49,7 +49,9 @@ This is the most common and recommended method.
 
 2. Navigate to the directory where your .pem file is stored.  
 
-3. Set permissions for your private key (Linux/macOS only):      
+3. Set permissions for your private key (Linux/macOS only):
+
+      
 
 Bash
 
