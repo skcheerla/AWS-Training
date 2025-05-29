@@ -57,7 +57,7 @@ chmod 400 your-key-pair-name.pem
 
 (Replace your-key-pair-name.pem with the actual name of your key file.)  
 
-**Construct the SSH command:**  
+4. Construct the SSH command: 
 
 ```bash
 ssh -i /path/to/your-key-pair-name.pem ec2-user@your-instance-public-dns-or-ip
@@ -76,7 +76,7 @@ your-instance-public-dns-or-ip:
 
 You can find the Public IPv4 address or Public DNS (IPv4) of your EC2 instance in the AWS EC2 console, under the instance details.  
 
-Example: 
+**Example:** 
 
 ```bash
 
@@ -89,60 +89,76 @@ or
 ssh -i my-aws-key.pem ec2-user@192.0.2.1  
 ```
 
-Confirm the connection:
+5. Confirm the connection:
 
-The first time you connect, you might see a message about the authenticity of the host. Type yes and press Enter to continue. This adds the host to your known_hosts file, so you won't be prompted again for that specific host.
-Method 2: Using PuTTY (Windows)
-If you're on Windows and prefer PuTTY, you'll first need to convert your .pem key.
+The first time you connect, you might see a message about the authenticity of the host. Type yes and press Enter to continue. This adds the host to your known_hosts file, so you won't be prompted again for that specific host.  
 
- Download and Install PuTTY and PuTTYgen: You can find them on the PuTTY download page.
+## Method 2: Using PuTTY (Windows)  
 
-Convert your .pem file to .ppk using PuTTYgen:
+If you're on Windows and prefer PuTTY, you'll first need to convert your **.pem key**.
 
-Open PuTTYgen.
-Click "Load" and browse to your .pem file (you might need to select "All Files" in the file type dropdown).
-Click "Save private key" and save it as a .ppk file (e.g., my-aws-key.ppk). You can optionally set a passphrase for added security.
-Connect using PuTTY:
+ **1. Download and Install PuTTY and PuTTYgen:** You can find them on the PuTTY download page.  
+ 
+**2. Convert your .pem file to .ppk using PuTTYgen:**  
 
-Open PuTTY.
-In the "Session" category:
-Host Name (or IP address): Enter ec2-user@your-instance-public-dns-or-ip (replace ec2-user with the correct username and the DNS/IP).
-Port: Make sure it's 22.
-Connection type: Select SSH.
-In the "Category" pane, navigate to Connection > SSH > Auth.
-Click "Browse..." and select your saved .ppk file.
-Click "Open".
-Method 3: Using EC2 Instance Connect (Web-based or AWS CLI)
-EC2 Instance Connect provides a simplified way to connect to your instances, especially for quick access or if you don't want to manage SSH keys directly. It uses AWS IAM to push ephemeral SSH keys.
+**Open PuTTYgen.  **
 
+Click "Load" and browse to your .pem file (you might need to select "All Files" in the file type dropdown).  
 
-A. From the EC2 Console (Web-based):
+Click "Save private key" and save it as a .ppk file (e.g., my-aws-key.ppk). You can optionally set a passphrase for added security.  
 
-Go to the EC2 Instances page in the AWS Management Console.
-Select the Linux instance you want to connect to.
-Click the "Connect" button.
-Choose the "EC2 Instance Connect" tab.
-Select the user name (e.g., ec2-user).
-Click "Connect". A new browser window will open with a shell session to your instance.
-B. Using AWS CLI with EC2 Instance Connect:
+## Connect using PuTTY:
+
+Open PuTTY.  
+
+In the "Session" category:  
+
+Host Name (or IP address): Enter ec2-user@your-instance-public-dns-or-ip (replace ec2-user with the correct username and the DNS/IP).  
+
+Port: Make sure it's 22.  
+
+Connection type: Select SSH.  
+
+In the "Category" pane, navigate to Connection > SSH > Auth.  
+
+Click "Browse..." and select your saved .ppk file.  
+
+Click "Open".  
+
+# Method 3: Using EC2 Instance Connect (Web-based or AWS CLI)  
+
+EC2 Instance Connect provides a simplified way to connect to your instances, especially for quick access or if you don't want to manage SSH keys directly. It uses AWS IAM to push ephemeral SSH keys.  
+
+## A. From the EC2 Console (Web-based):
+
+1. Go to the EC2 Instances page in the AWS Management Console.  
+2. Select the Linux instance you want to connect to.  
+3. Click the "Connect" button.  
+4. Choose the "EC2 Instance Connect" tab.  
+5. Select the user name (e.g., ec2-user).  
+6. Click "Connect". A new browser window will open with a shell session to your instance.
+   
+## B. Using AWS CLI with EC2 Instance Connect:    
 
 This method requires the AWS CLI to be installed and configured on your local machine.
 
-Install/Update AWS CLI: Ensure you have the latest version of the AWS CLI.
+1. **Install/Update AWS CLI:** Ensure you have the latest version of the AWS CLI.  
 
-Install EC2 Instance Connect CLI:
+2. **Install EC2 Instance Connect CLI:**
 
-Bash
-
+```bash
 pip install ec2instanceconnectcli
-(You might need pip3 depending on your Python setup).
+```
 
-Connect:
+(You might need pip3 depending on your Python setup).  
 
-Bash
+3. **Connect:**
 
+```bash
 aws ec2-instance-connect ssh --instance-id i-xxxxxxxxxxxxxxxxx
-(Replace i-xxxxxxxxxxxxxxxxx with your instance ID.)
+```
 
-The EC2 Instance Connect CLI handles the key generation and temporary key injection for you, making the process very straightforward.
-2. How to login to a Private Subnet EC2 Host
+(Replace i-xxxxxxxxxxxxxxxxx with your instance ID.)  
+
+The EC2 Instance Connect CLI handles the key generation and temporary key injection for you, making the process very straightforward.  
+
