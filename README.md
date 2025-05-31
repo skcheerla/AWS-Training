@@ -1,2 +1,0 @@
-# AWS-Training
-AWS Training 
