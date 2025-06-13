@@ -29,9 +29,10 @@
 
 ## How to use them in real scenarios:  
 
-**Securely accessing S3 from EC2 instances:** If you have an application running on EC2 instances within a private subnet and it needs to store or retrieve data from S3, you can create a Gateway Endpoint for S3. This ensures that all traffic to S3 stays within the AWS network, never traversing the internet, which is crucial for sensitive data.   
+**Securely accessing S3 from EC2 instances:** If you have an application running on EC2 instances within a private subnet and it needs to store or retrieve data from S3, you can create a Gateway Endpoint for S3. This ensures that all traffic to S3 stays within the AWS network, never traversing the internet, which is crucial for sensitive data.     
 
-![image](https://github.com/user-attachments/assets/fdf94421-799f-4d90-b34e-646933c92056)
+![image](https://github.com/user-attachments/assets/839ddef6-671e-4795-b70b-58d89144450b)
+
 
 
 
