@@ -1,11 +1,11 @@
-Could you plesae create 3 Security Groups for the 3-Tier Architecture as mentioned below.
+# Could you plesae create 3 Security Groups for the 3-Tier Architecture as mentioned below.
 
 ![image](https://github.com/user-attachments/assets/ca3b5dc5-486a-41ad-8c10-23e22a8a3c2d)
 
-1. Create WEB Servers Security Group with the following Inbound rules.
+## 1. Create WEB Servers Security Group with the following Inbound rules.
 
-   HTTP/80 and HTTPS/443 - Allow from Anywhere
-   SSH ( TCP/22) Allow only from the Bastion Hosts Network.
+   ### HTTP/80 and HTTPS/443 - Allow from Anywhere
+   ### SSH ( TCP/22) Allow only from the Bastion Hosts Network.
 
    **Common Default Web Server Port Numbers:**
 
@@ -26,10 +26,10 @@ While 80, 443, and 8080 are the most prevalent, web servers can be configured to
 
 
 
-3. Create App Servers Security Group with the Following Inbound rules.
+## 2. Create App Servers Security Group with the Following Inbound rules.
 
-  Allow the Traffic on TCP/8080 ( Application Port) from Web servers SG/Subnet.
-  SSH ( TCP/22) Allow only from the Bastion Hosts Network.
+  ### Allow the Traffic on TCP/8080 ( Application Port) from Web servers SG/Subnet.
+  ### SSH ( TCP/22) Allow only from the Bastion Hosts Network.
 
   
 **Common Default Application Server Port Numbers:**
@@ -69,9 +69,12 @@ While 80, 443, and 8080 are the most prevalent, web servers can be configured to
 * **Other Specialized Application Servers:**
     * **Elasticsearch:** `9200` (TCP) for HTTP REST API, `9300` (TCP) for inter-node communication (though often accessed as a data store rather than a traditional "application server").
   
-3. Create DB servers Security Group with the following Inbound Rules.
+## 3. Create DB servers Security Group with the following Inbound Rules.  
 
-    Allow the Traffic from Web Servers Sg/Subnet on DB port numbers
+
+    ### Allow the Traffic from Web Servers SG/Subnet on DB port numbers.  
+    ### SSH ( TCP/22) Allow only from the Bastion Hosts Network.
+    
 
    **Common Default Database Port Numbers:**
 
