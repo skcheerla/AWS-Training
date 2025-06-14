@@ -17,7 +17,7 @@
 
 ## Key Characteristics:  
 
-**Supported Services:** Currently only supports Amazon S3 and Amazon DynamoDB.  
+**Supported Services:** **Currently only supports Amazon S3 and Amazon DynamoDB.**  
 
 **Cost:** No additional charge for using Gateway Endpoints.  
 
