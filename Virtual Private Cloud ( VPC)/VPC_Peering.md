@@ -73,6 +73,10 @@ Resources in one peered VPC cannot use another VPC's internet gateway, NAT devic
 
 ## VPC peering is an excellent solution for:  
 
+
+https://media.amazonwebservices.com/blog/2016/qsrd_pci_vpc_arch_2.png
+
+
 **Simple, direct 1:1 connections between two VPCs**.    
 
 **Small to medium-sized architecture**s with a limited number of VPCs (e.g., 2-5) that need to communicate.  
