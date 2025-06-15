@@ -1,6 +1,7 @@
 
 
 
-https://media.amazonwebservices.com/blog/2016/qsrd_pci_vpc_arch_2.png
-![image](https://github.com/user-attachments/assets/8b2611ef-b408-4f91-a852-0e4879e5403d)
+
+![image](https://github.com/user-attachments/assets/6e16e8c2-78f8-4946-8f09-bbfdc7a3a4ac)
+
 
