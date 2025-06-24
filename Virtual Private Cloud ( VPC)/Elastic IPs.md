@@ -1,5 +1,8 @@
 In AWS, an **Elastic IP (EIP)** is a static, public IPv4 address that you can allocate to your AWS account and associate with a resource in your Virtual Private Cloud (VPC), such as an EC2 instance or a Network Load Balancer.
 
+https://www.youtube.com/watch?v=UAdlVht4Xlw
+
+
 ### The Purpose of an Elastic IP:
 
 The primary purpose of an Elastic IP is to provide a **stable and persistent public-facing IP address** for your AWS resources, even if the underlying resource changes or is stopped and started.
