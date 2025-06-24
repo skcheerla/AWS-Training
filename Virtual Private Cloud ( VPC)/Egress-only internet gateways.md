@@ -1,5 +1,8 @@
 An **Egress-Only Internet Gateway (EIGW)** in AWS is a specialized type of internet gateway used specifically for **IPv6 traffic**. Its primary purpose is to allow instances within a Virtual Private Cloud (VPC) to initiate outbound connections to the internet over IPv6, while simultaneously preventing any incoming, unsolicited IPv6 connections from the internet to those instances.
 
+![image](https://github.com/user-attachments/assets/5dc1a94d-1040-4be1-a225-9f0fbbe44f93)
+
+
 ### Importance of Egress-Only Internet Gateways
 
 The importance of Egress-Only Internet Gateways stems from the nature of IPv6 addresses:
