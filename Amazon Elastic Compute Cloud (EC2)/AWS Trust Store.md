@@ -1,0 +1,30 @@
+In AWS, a **trust store** is essentially a collection of **Certificate Authority (CA) certificates**. Its primary purpose is to enable secure communication by allowing services and applications to verify the authenticity of other entities (servers, clients) they are communicating with.
+
+Here's a breakdown of what that means and why it's important in AWS:
+
+**Core Concept:**
+
+* **Certificates and CAs:** When you connect to a secure website (HTTPS), your browser verifies the website's certificate. This certificate is signed by a Certificate Authority (CA), which is a trusted third party. Your browser has a built-in "trust store" containing certificates from well-known CAs. If the website's certificate is signed by a CA in your browser's trust store, your browser trusts the website.
+* **AWS Trust Store:** Similarly, in AWS, a trust store holds CA certificates that AWS services or your applications can use to establish trust.
+
+**Key Use Cases in AWS:**
+
+1.  **Mutual Authentication (mTLS) with Application Load Balancers (ALBs):**
+    * This is a significant use case. With mTLS, both the client and the server (in this case, your ALB) verify each other's identity using certificates.
+    * You can create a trust store in AWS and upload your own CA certificates (from AWS Private CA, a third-party CA, or even a self-signed CA) into it.
+    * When you enable mTLS on an ALB listener and associate it with this trust store, the ALB will use the CA certificates in the trust store to validate client certificates presented during the TLS handshake. This ensures that only trusted clients can connect to your backend applications.
+
+2.  **Amazon WorkSpaces Web:**
+    * In Amazon WorkSpaces Web, a trust store can be associated with a web portal.
+    * This allows the browser in a streaming session to recognize certificates issued by CAs within that trust store. This is especially useful for accessing internal websites that might use certificates issued by your organization's private CAs.
+
+3.  **AWS IoT SiteWise Edge:**
+    * For AWS IoT SiteWise Edge components connecting through an HTTPS proxy, you might need to add the proxy server's certificate to the appropriate trust stores. This ensures secure communication between SiteWise Edge components and AWS services or OPC UA servers.
+
+**Benefits of using a Trust Store in AWS:**
+
+* **Enhanced Security:** By verifying certificates against a trusted set of CAs, you ensure that only legitimate and authorized entities can communicate with your applications and services.
+* **Control over Trust:** You have explicit control over which CAs are trusted for specific workflows, especially for internal or private certificate infrastructures.
+* **Simplified Management:** AWS provides managed trust store capabilities, making it easier to upload, manage, and associate CA certificates without needing to manually configure trust on individual instances or applications.
+
+In essence, an AWS trust store acts as a central repository for trusted Certificate Authority certificates, enabling secure and authenticated communication across various AWS services and your deployed applications.
