@@ -1,5 +1,7 @@
 **AWS Lambda** is a core service in the AWS "serverless" computing paradigm. It's an **event-driven, serverless compute service** that allows you to run your code without provisioning or managing servers. You simply upload your code (a "Lambda function"), and Lambda automatically handles all the underlying infrastructure, including server and operating system maintenance, capacity provisioning, automatic scaling, code deployment, and monitoring.
 
+Demo Video : https://www.youtube.com/watch?v=XFGSuj83wdc
+
 Here's a breakdown of its key aspects:
 
 * **Serverless:** This is the most crucial concept. "Serverless" doesn't mean there are no servers; it means you, as the developer, don't have to worry about them. AWS manages all the physical servers, virtual machines, operating systems, and infrastructure scaling. You just provide your code.
