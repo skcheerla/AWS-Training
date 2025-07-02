@@ -2,6 +2,9 @@
 
 Demo Video : https://www.youtube.com/watch?v=XFGSuj83wdc
 
+![image](https://github.com/user-attachments/assets/0ed0d208-6950-4425-9537-44d42616ee43)
+
+
 Here's a breakdown of its key aspects:
 
 * **Serverless:** This is the most crucial concept. "Serverless" doesn't mean there are no servers; it means you, as the developer, don't have to worry about them. AWS manages all the physical servers, virtual machines, operating systems, and infrastructure scaling. You just provide your code.
