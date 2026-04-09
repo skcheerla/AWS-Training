@@ -1,6 +1,10 @@
-This command is used to install the **AWS Cloud Development Kit (CDK)** globally on your local machine. The AWS CDK is an open-source software development framework used to define cloud infrastructure in code and provision it through AWS CloudFormation.
+ The AWS CDK is an open-source software development framework used to define cloud infrastructure in code and provision it through AWS CloudFormation.
 
 Here is a breakdown of what each part of the command does:
+
+`**npm install -g aws-cdk**`
+
+This command is used to install the **AWS Cloud Development Kit (CDK)** globally on your local machine.
 
 ### Command Breakdown
 
