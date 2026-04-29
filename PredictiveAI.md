@@ -1,3 +1,7 @@
+<img width="1440" height="3640" alt="image" src="https://github.com/user-attachments/assets/b3b970fa-61a2-44c9-b3a4-b2e4e6e72aaf" />
+
+
+
 Here's the full enterprise-grade runbook across 7 phases. Each box is clickable to dive deeper. Here's what each phase covers in terms of key tools and sequencing:
 
 **Phase 1 — Foundation.** Start with Terraform to provision your AWS Organization structure (dev/staging/prod accounts), design your VPC with private subnets and S3/SageMaker VPC endpoints, and lock down IAM with least-privilege roles and Service Control Policies. This is the plumbing everything else sits on.
