@@ -18,6 +18,30 @@ Here's the full enterprise-grade runbook across 7 phases. Each box is clickable 
 
 **Phase 7 — Security & governance.** Encrypt everything with KMS customer-managed keys, enforce column/row access via Lake Formation, enable CloudTrail and AWS Config rules for continuous compliance, use GuardDuty for anomaly detection, and Macie to catch PII leakage in your data lake.
 
+
+
+<img width="1440" height="4040" alt="image" src="https://github.com/user-attachments/assets/c416a962-2653-408c-a438-75dae60f9b0f" />
+
+
 The two footer cards — cost optimization (spot training + Graviton + Savings Plans) and HA/DR (multi-AZ, S3 replication, defined RTO/RPO targets) — cut across all phases and should be addressed during phases 1 and 5 respectively.
 
 Given that RepRisk's stack explicitly mentions Databricks, Airflow, and Elastic Search, you'd slot Databricks in as an alternative to Glue for heavy Spark-based ETL (phase 2), Airflow as the orchestrator triggering SageMaker Pipelines (phase 3/4), and Elasticsearch as the backing store for the Kibana log dashboards (phase 6).
+
+
+Here's the full 7-phase GenAI runbook on AWS. Every box is tappable to go deeper. Here's the key thinking behind each phase:
+
+**Phase 1 — Foundation & LLM access.** The entry point is choosing your model access pattern: Amazon Bedrock for managed API access to Claude, Titan, Llama, Mistral, and Cohere, or SageMaker JumpStart / BYOM for deploying open-weight models on your own GPU fleet. Lock down with VPC endpoints (no traffic over public internet), Bedrock Guardrails set at account level, and IAM roles scoped per team.
+
+**Phase 2 — Knowledge base & RAG.** This is the most impactful capability for enterprise use. The pipeline flows: documents in S3 → chunking strategy → Titan or Cohere embeddings → vector index in OpenSearch Serverless or pgvector on Aurora. Bedrock Knowledge Bases manages this end-to-end with a no-code option, or you wire it yourself with LangChain for full control. Kendra adds hybrid keyword+semantic search for structured enterprise content.
+
+**Phase 3 — Fine-tuning & alignment.** Use fine-tuning only when RAG and prompt engineering fall short. The lightest path is Bedrock's managed fine-tuning (JSONL in S3, done). For heavier customization, LoRA/QLoRA on SageMaker p4d/g5 instances cuts GPU memory requirements by 8–10x. RLHF/DPO comes last — only when you need human preference alignment at scale.
+
+**Phase 4 — Agents & orchestration.** Bedrock Agents is the native option: define action groups backed by Lambda, attach a knowledge base, and the agent handles multi-step reasoning automatically. For complex multi-agent workflows, LangGraph on ECS gives you full control over the graph of agent calls. Step Functions is the glue for long-running, auditable agentic pipelines with retry logic and state persistence.
+
+**Phase 5 — LLM serving & API layer.** The key decision is latency vs throughput vs cost. Bedrock API handles elasticity for you. For self-hosted models, vLLM on EKS with GPU node autoscaling (Karpenter) gives the best throughput via PagedAttention. Add a semantic cache with ElastiCache to cut repeat inference costs by 40–60%. API Gateway + WAF sits in front of everything to enforce throttling and block prompt injection attempts.
+
+**Phase 6 — Evals, tracing & observability.** The critical metrics are Time to First Token (TTFT), tokens per second, cost-per-call, and groundedness score. Bedrock Model Evaluation provides automated LLM-as-judge scoring. Instrument all chains with OpenTelemetry feeding into X-Ray for distributed tracing. Set CloudWatch alarms on hallucination rate proxies (low groundedness, high refusal rate) as production quality gates.
+
+**Phase 7 — Responsible AI & governance.** Bedrock Guardrails is your first line — configure denied topics, content filters, and grounding checks at the API level before responses ever reach users. AWS Comprehend and Macie handle PII detection in prompts and outputs. Every model invocation is logged via CloudTrail to S3 for audit trails. SageMaker Model Cards give you the governance documentation layer regulators (and RepRisk's compliance-focused clients) will expect.
+
+The key difference from the predictive ML runbook: GenAI adds **prompt engineering as infrastructure** (prompt versioning, A/B testing via feature flags), **guardrails as a first-class concern** at the API layer, and **agentic orchestration** as a new tier that sits between the model and your business logic.
